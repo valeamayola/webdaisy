@@ -1,3 +1,7 @@
+import '../App.css';
+import { LeftSvg } from '../img/icons/left.svg.tsx';
+import { RightSvg } from '../img/icons/right.svg.tsx';
+
 const images = [
   '../src/img/svg1.svg',
   '../src/img/svg2.svg',
@@ -6,7 +10,7 @@ const images = [
 
 const Carousel = () => {
   return (
-    <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+    <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-gradient-to-r from-sky-600 from-10% via-sky-600 via-30% to-sky-400 to-90% rounded-box shadow-2xl w-2/3 mt-2">
       {images.map((image, index) => (
         <div
           key={index}
@@ -15,8 +19,12 @@ const Carousel = () => {
         >
           <img src={image} className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
-            <a href={`#slide${index}`} className="btn btn-circle bg-neutral">❮</a>
-            <a href={`#slide${index + 2}`} className="btn btn-circle bg-neutral">❯</a>
+            <a href={`#slide${index}`} className='top-5'>
+              <LeftSvg />
+            </a>
+            <a href={`#slide${index + 2}`}>
+              <RightSvg />
+            </a>
           </div>
         </div>
       ))}
