@@ -2,6 +2,7 @@ import '../App.css';
 import { LeftSvg } from '../img/icons/left.svg.tsx';
 import { RightSvg } from '../img/icons/right.svg.tsx';
 
+
 const images = [
   '../src/img/svg1.svg',
   '../src/img/svg2.svg',
