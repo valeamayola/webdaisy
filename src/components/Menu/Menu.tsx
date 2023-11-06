@@ -1,16 +1,5 @@
-import React from "react";
+import { MenuProps } from './Menu.types';
 
-interface MenuProps {
-    items: Array<{
-      key: string;
-      href: string;
-      children: React.ReactNode;
-      hasNotification?: boolean;
-      notificationCount?: number;
-      disabled?: boolean;
-    }>;
-  }
-  
   export default function Menu( props: MenuProps ) : JSX.Element {
     return (
       <ul className="btm-nav justify-center bg-base-200 fixed bottom-0 left-0 right-0 width-full h-fit p-2 flex items-center">

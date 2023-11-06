@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import Carousel from './components/Carousel';
 import Menu from './components/Menu/Menu';
 import Alert from './components/Alert';

@@ -1,8 +1,6 @@
-import '../App.css';
+import '../../App.css';
+import { NavBarProps } from './NavBar.types';
 
-interface NavBarProps {
-    title?: string;
-}
 
  export default function NavBar({}: NavBarProps) {
     return (
