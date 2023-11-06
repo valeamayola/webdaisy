@@ -11,30 +11,40 @@ interface MenuProps {
     }>;
   }
   
-  const Menu: React.FC<MenuProps> = ({ items }) => {
+  export default function Menu( props: MenuProps ) : JSX.Element {
     return (
       <ul className="btm-nav justify-center bg-base-200 fixed bottom-0 left-0 right-0 width-full h-fit p-2 flex items-center">
-        {items.map((item) => (
+        {props.items.map((item) => (
           <li key={item.key}>
             <span className="text">
-            <a href={item.href} onClick={() => {
+            <a href={item.href} onClick={(event) => {
               if (item.disabled) {
-                event?.preventDefault();
+                event.preventDefault();
                 const alert = document.createElement("div");
                 alert.className = "alert alert-info fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2";
                 alert.innerHTML = `
-                    <span>Aún no está disponible</span>
+                <button type="button" className="close" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-0" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                </button>
+                <span>Aún no está disponible</span>
                 `;
 
                 document.body.appendChild(alert);
 
+                const closeButton = alert as HTMLElement;
+                if (closeButton) {
+                    
+                    closeButton.addEventListener("click", () => {
+                        alert.remove();
+                    });
+                }
+                
                 setTimeout(() => {
                   alert.remove();
                 }, 5000);
               }
             }}>
               {item.children}
-            </a>
             <div className="indicator">
             {(item.hasNotification && item.notificationCount) && (
               <span className="badge badge-xs badge-secondary rounded-box indicator-item" style={{ fontSize: "12px", top: "-50px",
@@ -44,11 +54,10 @@ interface MenuProps {
               </span>
             )}
             </div>
+            </a>
           </span>
         </li>
       ))}
     </ul>
   );
 };
-
-export default Menu;

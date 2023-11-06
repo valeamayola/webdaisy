@@ -1,10 +1,10 @@
-import React from "react";
 import '../App.css';
 
 interface NavBarProps {
+    title?: string;
 }
 
-const NavBar: React.FC<NavBarProps> = () => {
+ export default function NavBar({}: NavBarProps) {
     return (
       <div className="navbar bg-accent w-full absolute top-0 left-0 mb-0">
         <div className="flex-1">
@@ -34,6 +34,3 @@ const NavBar: React.FC<NavBarProps> = () => {
       </div>
     );
   };
-
-
-export default NavBar;

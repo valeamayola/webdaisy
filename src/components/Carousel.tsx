@@ -9,7 +9,7 @@ const images = [
   '../src/img/svg3.svg',
 ];
 
-const Carousel = () => {
+export default function Carousel () {
   return (
     <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-gradient-to-r from-sky-600 from-10% via-sky-600 via-30% to-sky-400 to-90% rounded-box shadow-2xl w-2/3 mt-2">
       {images.map((image, index) => (
@@ -32,5 +32,3 @@ const Carousel = () => {
     </div>
   );
 };
-
-export default Carousel;

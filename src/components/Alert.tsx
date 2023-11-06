@@ -1,6 +1,6 @@
 import '../App.css';
 
-const Alert  = () => {
+export default function Alert () {
     return (
         <><div className="alert alert-info mt-0">
             <span>Marca el ícono y ubicalo en el mapa.</span>
@@ -9,5 +9,3 @@ const Alert  = () => {
             </div></>
     )
 };
-
-export default Alert;
