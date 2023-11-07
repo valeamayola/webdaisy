@@ -1,19 +1,12 @@
 import './App.css';
-import { NavBar } from './components/NavBar';
-import { Carousel } from './components/Carousel';
-import { Menu } from './components/Menu/Menu';
-import { Alert } from './components/Alert';
-import { menuItems } from "./components/Menu/menuItems";
+import { BrowserRouter } from "react-router-dom";
+//import { Home } from './components/Home/Home';
+import { Login } from './components/Login/Login';
 
-function App() {
+export function App() {
   return (
-    <div className="h-full">
-    <NavBar></NavBar>
-    <Alert></Alert>
-    <Carousel></Carousel>
-    <Menu items={menuItems}></Menu>
-    </div>
+    <BrowserRouter>
+      <Login />
+    </BrowserRouter>
   );
 }
-
-export default App;

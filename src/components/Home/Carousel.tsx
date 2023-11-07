@@ -1,6 +1,6 @@
-import '../App.css';
-import { LeftSvg } from '../img/icons/left.svg.tsx';
-import { RightSvg } from '../img/icons/right.svg.tsx';
+import '../../App.css';
+import { LeftSvg } from '../../img/icons/left.svg.tsx';
+import { RightSvg } from '../../img/icons/right.svg.tsx';
 import { useState } from 'react';
 
 
