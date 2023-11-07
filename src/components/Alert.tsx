@@ -1,6 +1,6 @@
 import '../App.css';
 
-export default function Alert () {
+export function Alert () {
     return (
         <><div className="alert alert-info mt-0">
             <span>Marca el ícono y ubicalo en el mapa.</span>

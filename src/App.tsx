@@ -1,8 +1,8 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import Carousel from './components/Carousel';
-import Menu from './components/Menu/Menu';
-import Alert from './components/Alert';
+import { NavBar } from './components/NavBar';
+import { Carousel } from './components/Carousel';
+import { Menu } from './components/Menu/Menu';
+import { Alert } from './components/Alert';
 import { menuItems } from "./components/Menu/menuItems";
 
 function App() {

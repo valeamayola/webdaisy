@@ -1,6 +1,6 @@
 import { MenuProps } from './Menu.types';
 
-  export default function Menu( props: MenuProps ) : JSX.Element {
+  export function Menu( props: MenuProps ) : JSX.Element {
     return (
       <ul className="btm-nav justify-center bg-base-200 fixed bottom-0 left-0 right-0 width-full h-fit p-2 flex items-center">
         {props.items.map((item) => (

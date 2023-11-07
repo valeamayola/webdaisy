@@ -1,7 +1,7 @@
 import '../App.css';
 import { LeftSvg } from '../img/icons/left.svg.tsx';
 import { RightSvg } from '../img/icons/right.svg.tsx';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 const images = [
@@ -10,21 +10,9 @@ const images = [
   '../src/img/svg3.svg',
 ];
 
-export default function Carousel () {
+export function Carousel () {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slides] = useState(images);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentSlide === slides.length - 1) {
-        setCurrentSlide(0);
-      } else {
-        setCurrentSlide(currentSlide + 1);
-      }
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [currentSlide, slides]);
 
   const handlePreviousSlide = () => {
     if (currentSlide === 0) {

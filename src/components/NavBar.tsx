@@ -1,8 +1,6 @@
-import '../../App.css';
-import { NavBarProps } from './NavBar.types';
+import '../App.css';
 
-
- export default function NavBar({}: NavBarProps) {
+ export function NavBar() {
     return (
       <div className="navbar bg-accent w-full absolute top-0 left-0 mb-0">
         <div className="flex-1">
