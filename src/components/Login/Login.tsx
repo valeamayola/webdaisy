@@ -12,3 +12,5 @@ export function Login () {
     </div>
   );
 };
+
+export const LoginComponent = Login;

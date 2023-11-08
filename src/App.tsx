@@ -1,12 +1,15 @@
-import './App.css';
-import { BrowserRouter } from "react-router-dom";
-//import { Home } from './components/Home/Home';
+import '../src/App.css'
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
 import { Login } from './components/Login/Login';
 
-export function App() {
+
+export function App () {
   return (
     <BrowserRouter>
-      <Login />
-    </BrowserRouter>
+      <Routes>
+      <Route path='/' Component={Login} />
+      </Routes>
+      </BrowserRouter>
   );
-}
+};

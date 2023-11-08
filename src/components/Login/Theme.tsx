@@ -15,7 +15,7 @@ export function ThemeSwitcher() {
 
   return (
     <div className="theme-switcher mb-2">
-        <select className="form-control w-15 max-w-xs p-5" value={theme} onChange={handleChange}>
+        <select className="form-control w-15 max-w-xs p-5 rounded-md border-gray-300 bg-white text-gray-700" value={theme} onChange={handleChange}>
           <option value="mytheme">Defecto</option>
           <option value="black">Black</option>
           <option value="wireframe">Wireframe</option>
