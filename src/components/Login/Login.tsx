@@ -3,8 +3,10 @@ import Form from "./Form";
 
 
 export function Login () {
+
     const handleSubmit = (values: { user: string; password: string }) => {
     };
+    
   return (
     <div>
     <ThemeSwitcher />
@@ -13,4 +15,3 @@ export function Login () {
   );
 };
 
-export const LoginComponent = Login;

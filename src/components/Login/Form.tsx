@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 type FormProps = {
     onSubmit: (values: { user: string; password: string }) => void;
@@ -7,10 +8,13 @@ type FormProps = {
   const Form: React.FC<FormProps> = ({ onSubmit }) => {
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate ();
   
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       onSubmit({ user, password });
+
+      navigate ("/home");
     };
   
     return (
