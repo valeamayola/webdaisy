@@ -2,25 +2,26 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 type FormProps = {
-    onSubmit: (values: { user: string; password: string }) => void;
+    onSubmit: (values: { user: string; email: string; password: string; confirmpassword: string;}) => void;
   };
 
-  const Form: React.FC<FormProps> = ({ onSubmit }) => {
+  const FormRegister: React.FC<FormProps> = ({ onSubmit }) => {
     const [user, setUser] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmpassword, setConfirmPassword] = useState("");
     const navigate = useNavigate ();
   
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      onSubmit({ user, password });
-
+      onSubmit({ user, email, password, confirmpassword });
 
     };
   
     return (
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <form className="card-body" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold mt-3">Iniciar sesión</h1>
+        <h1 className="text-2xl font-bold mt-3">Registrarse</h1>
           <div className="form-control">
             <label className="label">
             </label>
@@ -37,6 +38,18 @@ type FormProps = {
             <label className="label">
             </label>
             <input
+              type="text"
+              className="input input-bordered"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+            </label>
+            <input
               type="password"
               className="input input-bordered"
               placeholder="Contraseña"
@@ -44,21 +57,21 @@ type FormProps = {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+          </div>
+          <div className="form-control">
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                ¿Olvidaste tu contraseña? Recuperala aquí
-              </a>
             </label>
+            <input
+              type="password"
+              className="input input-bordered"
+              placeholder="Confirmar contraseña"
+              required
+              value={confirmpassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
           </div>
           <div className="form-control mt-2">
-            <button className="btn btn-secondary mb-7 rounded-box text-white uppercase" onClick={() => navigate('/home')}>Entrar</button>
-            <button  className="btn btn-primary mb-3 rounded-box text-white uppercase" onClick={() => navigate('/register')}>Registrarse</button>
-            <button  className="btn btn-primary rounded-box text-white uppercase">
-                <div className="font-black text-md">
-                Acceder <br />
-                como invitado
-                </div>
-                </button>
+            <button className="btn btn-secondary mb-7 rounded-box text-white uppercase" onClick={() => navigate('/home')}>Siguiente</button>
           </div>
         </form>
       </div>
@@ -66,4 +79,4 @@ type FormProps = {
   };
 
 
-export default Form;
+export default FormRegister;
