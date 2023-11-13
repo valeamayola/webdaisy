@@ -32,7 +32,7 @@ module.exports = {
 "error": "#f87272",
         },
       },
-      "black", "wireframe",
+      "black", "wireframe", "aqua", "night", "light", "dark",
     ],
   },
 }
