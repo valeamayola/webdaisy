@@ -23,11 +23,11 @@ type FormProps = {
         <h1 className="text-2xl font-bold mt-3">Iniciar sesión</h1>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Usuario</span>
             </label>
             <input
               type="text"
               className="input input-bordered"
+              placeholder="Usuario"
               required
               value={user}
               onChange={(e) => setUser(e.target.value)}
@@ -35,11 +35,11 @@ type FormProps = {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Contraseña</span>
             </label>
             <input
               type="password"
               className="input input-bordered"
+              placeholder="Contraseña"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
