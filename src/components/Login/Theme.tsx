@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export function ThemeSwitcher() {
-    const [theme, setTheme] = useState("mytheme");
+    const [theme, setTheme] = useState("wireframe");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTheme(e.target.value);

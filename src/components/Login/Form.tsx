@@ -18,7 +18,7 @@ type FormProps = {
     };
   
     return (
-      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card flex-shrink-0 ml-10 w-full max-w-sm shadow-2xl bg-base-100">
         <form className="card-body" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-bold mt-3">Iniciar sesión</h1>
           <div className="form-control">

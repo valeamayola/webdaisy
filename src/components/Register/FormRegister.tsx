@@ -19,7 +19,7 @@ type FormProps = {
     };
   
     return (
-      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 flex justify-center align-center h-5/6 mt-12">
         <form className="card-body" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-bold mt-3">Registrarse</h1>
           <div className="form-control">
@@ -71,7 +71,7 @@ type FormProps = {
             />
           </div>
           <div className="form-control mt-2">
-            <button className="btn btn-secondary mb-7 rounded-box text-white uppercase" onClick={() => navigate('/home')}>Siguiente</button>
+            <button className="btn btn-secondary mt-8 mb-7 rounded-box text-white uppercase" onClick={() => navigate('/home')}>Siguiente</button>
           </div>
         </form>
       </div>
