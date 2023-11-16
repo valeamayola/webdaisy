@@ -53,9 +53,32 @@ export function Welcome () {
                     ))}
                 </div>
                 <div className="flex justify-between">
-                <button className="btn border-none text-current rounded-xl text-lg bg-gradient-to-r from-gray-200 to-gray-300 mt-5 w-1/8 ml-10" onClick={() => navigate('/login')}>Saltear</button>
-                <button className="btn border-none text-current rounded-xl text-lg bg-gradient-to-r from-gray-200 to-gray-300 mt-5 w-1/8 mr-10" onClick={handleNextClick}>Siguiente</button>
+                <button 
+                key="skip"
+                className={`btn border-none text-current rounded-xl text-lg bg-gradient-to-r from-gray-200 to-gray-300 mt-5 w-1/8 ml-10 ${activeImage <= 1 ? 'visible' : 'hidden'}`}
+                onClick={() => navigate('/login')}
+                >
+                    Saltear
+                </button>
+                <button
+                key="next"
+                className={`btn border-none text-current rounded-xl text-lg bg-gradient-to-r from-gray-200 to-gray-300 mt-5 w-1/8 mr-10 ${activeImage <= 1 ? 'visible' : 'hidden'}`}
+                onClick={handleNextClick}
+                >
+                    Siguiente
+                </button>
                 </div>
+                <div className="justify-center align-center">
+                <button
+            key="start"
+            className={`btn border-none text-current rounded-xl text-lg bg-gradient-to-r from-gray-200 to-gray-300 mt-5 w-1/2 ${activeImage === images.length - 1 ? 'visible' : 'hidden'}`}
+            onClick={() => {
+              navigate('login')
+            }}
+          >
+            Empezar ahora
+          </button>
+          </div>
                 </div>
                 </div>
                 </div>
