@@ -1,4 +1,5 @@
 import '../../App.css';
+import { useState } from 'react';
 
 type Image = {
     url: string;
@@ -6,7 +7,7 @@ type Image = {
     description: string;
   };
   
-  const images: Image[] = [
+ export const images: Image[] = [
     {
       url: '../../../src/img/welcome/svgwelcome1.svg',
       title: 'Reporta incidentes de forma rápida y sencilla',
@@ -15,7 +16,7 @@ type Image = {
     {
       url: '../../../src/img/welcome/svgwelcome2.svg',
       title: 'Ayuda a mejorar tu comunidad',
-      description: 'Tu reporte ayudará a que el municipio tenga una mejor idea de los problemas que existen en la ciudad. Esto ayudará a que tomen medidas para resolverlos y mejorar la calidad de vida de todos.',
+      description: 'Tu reporte ayudará a que el municipio conozca los problemas que existen para poder tomar medidas para resolverlos y mejorar la calidad de vida de todos.',
     },
     {
       url: '../../../src/img/welcome/svgwelcome3.svg',
@@ -27,19 +28,8 @@ type Image = {
   const titlesAndDescriptions: [string, string][] = images.map((image) => [image.title, image.description]);
   
   export { titlesAndDescriptions };
-
-  export type CarouselWelcomeProps = {
-    onSlideChange: (image: typeof Image & { index: number }) => void;
-  };
   
-  export function CarouselWelcome({ onSlideChange }: CarouselWelcomeProps) {
-    return (
-      <div className="w-90 carousel rounded-box">
-        {images.map((image) => (
-          <div className="carousel-item w-full" key={image.url}>
-            <img src={image.url} className="w-full" alt="Tailwind CSS Carousel component" />
-          </div>
-        ))}
-      </div>
-    );
-  }
+  
+  const CarouselWelcome: [string][] = images.map((image) => [image.url]);
+  
+  export {CarouselWelcome}
