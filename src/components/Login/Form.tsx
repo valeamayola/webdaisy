@@ -18,7 +18,7 @@ type FormProps = {
     };
   
     return (
-      <div className="card flex-shrink-0 ml-10 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card rounded-3xl flex-shrink-0 ml-10 w-full max-w-sm shadow-2xl bg-base-100">
         <form className="card-body" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-bold mt-3">Iniciar sesión</h1>
           <div className="form-control">
@@ -45,15 +45,15 @@ type FormProps = {
               onChange={(e) => setPassword(e.target.value)}
             />
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+              <a href="#" className="text-base label-text-alt link link-hover">
                 ¿Olvidaste tu contraseña? Recuperala aquí
               </a>
             </label>
           </div>
           <div className="form-control mt-2">
-            <button className="btn btn-secondary mb-7 rounded-box text-white uppercase" onClick={() => navigate('/home')}>Entrar</button>
-            <button  className="btn btn-primary mb-3 rounded-box text-white uppercase" onClick={() => navigate('/register')}>Registrarse</button>
-            <button  className="btn btn-primary rounded-box text-white uppercase">
+            <button className="btn btn-secondary text-base mb-7 rounded-box text-white uppercase" onClick={() => navigate('/home')}>Entrar</button>
+            <button  className="btn btn-primary text-base mb-3 rounded-box text-white uppercase" onClick={() => navigate('/register')}>Registrarse</button>
+            <button  className="btn btn-primary  h-fit text-base rounded-box text-white uppercase">
                 <div className="font-black text-md">
                 Acceder <br />
                 como invitado
