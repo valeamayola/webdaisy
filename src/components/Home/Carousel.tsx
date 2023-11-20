@@ -31,7 +31,7 @@ export function Carousel () {
   };
 
   return (
-    <div id="controls-carousel" className="relative carousel carousel-center justify-center w-full max-w-md p-4 space-x-4 bg-gradient-to-r from-sky-600 from-10% via-sky-600 via-30% to-sky-400 to-90% rounded-box shadow-2xl w-2/3 mt-2">
+    <div id="controls-carousel" className="relative carousel carousel-center justify-center w-full max-w-md p-4 space-x-4 bg-gradient-to-r from-sky-600 from-10% via-sky-600 via-30% to-sky-400 to-90% rounded-3xl shadow-2xl w-2/3 mt-2">
       {slides.map((image, index) => (
         <div
           key={index}
