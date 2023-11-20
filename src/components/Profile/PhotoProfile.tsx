@@ -2,8 +2,8 @@ import '../../App.css';
 
 export function PhotoProfile () {
     return (
-        <div className='items-center justify-center align-center mr-24'>
-            <div className='avatar absolute top-24'>
+        <div className='relative'>
+            <div className='avatar -top-2'>
             <div className='w-28 rounded-full bg-base-200'>
               <svg className='w-14 m-auto mt-5'
               fill='rgb(163 163 163)'
