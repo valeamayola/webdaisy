@@ -1,10 +1,12 @@
 import '../../App.css';
+import { useNavigate } from 'react-router-dom';
 
  export function NavBar() {
+  const navigate = useNavigate();
     return (
       <div className='flex flex-col justify-end absolute top-0 right-0 mb-0 mr-5'>
         <div className='mt-6'>
-          <div className='avatar'>
+          <div className='avatar' onClick={() => navigate('/profile')}>
             <div className='w-14 rounded-full bg-base-200'>
               <svg className='w-7 m-auto mt-3'
               fill='rgb(163 163 163)'
