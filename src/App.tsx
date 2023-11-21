@@ -12,6 +12,7 @@ import { MyMarkers } from './components/Markers/MyMarkers';
 import { ConfigProfile } from './components/ConfigProfile/ConfigProfile';
 import { About } from './components/About/About';
 import { Notification } from './components/Home/Notification';
+import { Debates } from './components/Debates/Debates';
 
 export function App () {
   return (
@@ -27,7 +28,8 @@ export function App () {
       <Route path='/mymarkers' element={ < MyMarkers />} />
       <Route path='/config' element={ < ConfigProfile />} />
       <Route path='/about' element={ < About />} />
-      <Route path='/notification' element={ <Notification />} />
+      <Route path='/notification' element={ < Notification />} />
+      <Route path='/debates' element={ < Debates /> } />
       </Routes>
       </BrowserRouter>
   );

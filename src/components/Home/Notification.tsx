@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export function Notification () {
     const navigate = useNavigate ();
     return (
-        <div className='card w-60 bg-base-100 shadow-xl'>
+        <div className='card rounded-xl w-60 bg-base-100 shadow-xl'>
             <div className='card-body'>
             <div className="card-actions justify-end absolute -right-2 top-4">
                 <button className="btn btn-square btn-sm rounded-xl" onClick={() => navigate ('/home')}>
