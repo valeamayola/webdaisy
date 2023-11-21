@@ -7,6 +7,7 @@ import { Welcome } from './components/Welcome/Welcome';
 import { Register } from './components/Register/Register';
 import { Profile } from './components/Profile/Profile';
 import { Report } from './components/Report/Report';
+import { Info } from './components/Info/Info';
 
 export function App () {
   return (
@@ -18,6 +19,7 @@ export function App () {
       <Route path='/home' element={ <Home />} />
       <Route path='/profile' element={ <Profile />} />
       <Route path='/report' element={ <Report />} />
+      <Route path='/info' element={ <Info />} />
       </Routes>
       </BrowserRouter>
   );
