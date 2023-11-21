@@ -21,6 +21,12 @@ export function Report () {
                 </select>
                 <button className='btn mt-6'>Adjuntar imágen</button>
                 <input type="text" placeholder="Añadir descripción" className="input input-bordered w-full max-w-xs" />
+                <div className='flex flex-row'>
+                <span className='mt-1 font-medium ml-2'>Ubique el lugar del incidente</span>
+                <button className='btn btn-square rounded-xl btn-sm ml-8 bg-neutral-300'>
+                        <svg className='h-4 w-4' fill='rgb(100 100 100)' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                </button>
+                </div>
                 <button className='btn btn-wide mx-auto mt-10'>Reportar incidente</button>
                 </div>
             </div>
