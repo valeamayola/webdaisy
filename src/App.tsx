@@ -9,6 +9,7 @@ import { Profile } from './components/Profile/Profile';
 import { Report } from './components/Report/Report';
 import { Info } from './components/Info/Info';
 import { MyMarkers } from './components/Markers/MyMarkers';
+import { ConfigProfile } from './components/ConfigProfile/ConfigProfile';
 
 export function App () {
   return (
@@ -22,6 +23,7 @@ export function App () {
       <Route path='/report' element={ <Report />} />
       <Route path='/info' element={ <Info />} />
       <Route path='/mymarkers' element={ < MyMarkers />} />
+      <Route path='/config' element={ < ConfigProfile />} />
       </Routes>
       </BrowserRouter>
   );
