@@ -11,7 +11,7 @@ export function Profile () {
         <NavProfile></NavProfile>
         <PhotoProfile></PhotoProfile>
         <InfoProfile></InfoProfile>
-        <div className="divider relative top-2"></div> 
+        <div className="divider relative top-6"></div> 
         <OptionsProfile></OptionsProfile>
         <LogoutProfile></LogoutProfile>
         </div>

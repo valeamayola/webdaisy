@@ -3,7 +3,7 @@ import '../../App.css';
 export function PhotoProfile () {
     return (
         <div className='relative'>
-            <div className='avatar -top-2'>
+            <div className='avatar top-6'>
             <div className='w-28 rounded-full bg-base-200'>
               <svg className='w-14 m-auto mt-5'
               fill='rgb(163 163 163)'

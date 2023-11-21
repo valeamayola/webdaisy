@@ -8,6 +8,7 @@ import { Register } from './components/Register/Register';
 import { Profile } from './components/Profile/Profile';
 import { Report } from './components/Report/Report';
 import { Info } from './components/Info/Info';
+import { MyMarkers } from './components/Markers/MyMarkers';
 
 export function App () {
   return (
@@ -20,6 +21,7 @@ export function App () {
       <Route path='/profile' element={ <Profile />} />
       <Route path='/report' element={ <Report />} />
       <Route path='/info' element={ <Info />} />
+      <Route path='/mymarkers' element={ < MyMarkers />} />
       </Routes>
       </BrowserRouter>
   );
