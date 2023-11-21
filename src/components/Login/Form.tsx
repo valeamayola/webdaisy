@@ -18,7 +18,7 @@ type FormProps = {
     };
   
     return (
-      <div className="card rounded-3xl flex-shrink-0 ml-10 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card rounded-3xl flex-shrink-0 w-11/12 max-w-sm shadow-2xl bg-base-100 mx-auto">
         <form className="card-body" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-bold mt-3">Iniciar sesión</h1>
           <div className="form-control">
@@ -45,7 +45,7 @@ type FormProps = {
               onChange={(e) => setPassword(e.target.value)}
             />
             <label className="label">
-              <a href="#" className="text-base label-text-alt link link-hover">
+              <a href="#" className="text-base text-sm label-text-alt link link-hover">
                 ¿Olvidaste tu contraseña? Recuperala aquí
               </a>
             </label>

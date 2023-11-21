@@ -5,8 +5,7 @@ import { MenuProps } from './Menu.types';
       <ul className="btm-nav justify-center bg-base-200 fixed bottom-0 left-0 right-0 width-full h-fit p-2 flex items-center">
         {props.items.map((item) => (
           <li key={item.key}>
-            <span className="text">
-            <a href={item.href} onClick={(event) => {
+            <a href={item.href} className='h-12' onClick={(event) => {
               if (item.disabled) {
                 event.preventDefault();
                 const alert = document.createElement("div");
@@ -37,14 +36,13 @@ import { MenuProps } from './Menu.types';
             <div className="indicator">
             {(item.hasNotification && item.notificationCount) && (
               <span className="badge badge-xs badge-secondary rounded-box indicator-item" style={{ fontSize: "12px", top: "-50px",
-              right: "-30px",
+              right: "-50px",
               transform: "translate(-20px, -20px)",}}>
                 {item.notificationCount}
               </span>
             )}
             </div>
             </a>
-          </span>
         </li>
       ))}
     </ul>

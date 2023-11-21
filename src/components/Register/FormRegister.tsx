@@ -19,7 +19,7 @@ type FormProps = {
     };
   
     return (
-      <div className="card rounded-3xl flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 flex justify-center align-center h-fit mt-12">
+      <div className="card rounded-3xl flex-shrink-0 w-11/12 max-w-sm shadow-2xl bg-base-100 flex justify-center align-center h-fit mt-12">
         <form className="card-body" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-bold mt-3">Registrarse</h1>
           <div className="form-control">
