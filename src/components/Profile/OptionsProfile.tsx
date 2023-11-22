@@ -6,7 +6,7 @@ export function OptionsProfile () {
     return (
         <div className='relative top-8 flex flex-col mb-10'>
         <button className="btn btn-wide mb-5" onClick={() => navigate('/mymarkers')}>
-            Mis marcadores
+            Mis reportes
         </button>
         <button className="btn btn-wide mb-5" onClick={() => navigate('/config')}>
             Configuración
