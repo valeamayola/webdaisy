@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-envoy: 0 128 255;
+    --color-process: 255 192 5;
+    --color-resolved: 34 139 34;
+  }
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;

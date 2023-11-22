@@ -15,7 +15,7 @@ export function MyMarkers () {
             <div className='p-4 bg-neutral-200 mt-5 mb-2 rounded-xl w-60 text-start'>
                 <div className='flex flex-col'>
                 <span className='ml-2 font-normal text-base'>Reporte #123</span>
-                <span className='ml-2 font-bold text-sm text-gray-700'>Ver estado</span>
+                <span className='ml-2 font-bold text-sm text-gray-700' onClick={() => navigate('/statusmarker')}>Ver estado</span>
                 </div>
             </div>
             <div className='p-4 bg-neutral-200 mt-5 mb-2 rounded-xl w-60 text-start'>

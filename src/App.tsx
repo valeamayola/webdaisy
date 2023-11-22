@@ -15,6 +15,7 @@ import { Notification } from './components/Home/Notification';
 import { Debates } from './components/Debates/Debates';
 import { Markers } from './components/Markers/Markers';
 import { EditProfile } from './components/Profile/EditProfile';
+import { StatusMarker } from './components/Markers/StatusMarker';
 
 export function App () {
   return (
@@ -34,6 +35,7 @@ export function App () {
       <Route path='/debates' element={ < Debates /> } />
       <Route path='/markers' element={ < Markers />} />
       <Route path='/editprofile' element={ < EditProfile />} />
+      <Route path='/statusmarker' element={ < StatusMarker />} />
       </Routes>
       </BrowserRouter>
   );
